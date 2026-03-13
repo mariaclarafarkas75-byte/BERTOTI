@@ -1,4 +1,6 @@
-## 1. Comentário: A Identidade da Engenharia de Software
+> 1. Comentário: A Identidade da Engenharia de Software
+
+```
 O primeiro trecho do livro estabelece uma distinção fundamental entre o "fazer código" e a prática da engenharia. O autor defende que, embora os termos **Programação** e **Engenharia de Software** sejam usados como sinônimos, eles possuem pesos diferentes.
 
 * O texto sugere que a programação, por si só, é uma atividade de construção que muitas vezes carece de rigor. A Engenharia de Software, por outro lado, é apresentada como a aplicação de conhecimento teórico para criar soluções **reais, precisas e seguras**. O ponto central é a necessidade de maturidade na indústria: assim como um engenheiro aeronáutico não pode errar cálculos sem causar desastres, o software moderno — que sustenta a vida em sociedade — exige métodos muito mais rigorosos do que a "programação tradicional".
@@ -8,9 +10,11 @@ No segundo trecho, a definição de Engenharia de Software ganha uma dimensão t
 
 * **Análise:** Enquanto a programação foca em resolver o problema imediato (escrever o código), a engenharia foca em **manter esse código valioso e funcional durante anos**. Isso envolve processos, ferramentas e uma cultura organizacional que suporte a mudança. O sucesso não é apenas lançar o software, mas garantir sua **sustentabilidade**: a capacidade de um sistema reagir a mudanças, escalar conforme a organização cresce e sobreviver ao ciclo de vida que vai desde a criação até a sua eventual desativação (depreciação).
 
----
+```
 
-## 3. Requisitos Não Funcionais
+> 3. Requisitos Não Funcionais
+
+```
 Diferente dos requisitos funcionais (o que o sistema faz), os não funcionais descrevem **como** o sistema deve ser.
 
 1. **Performance (Desempenho):** Diz respeito à agilidade do sistema. Define, por exemplo, o tempo máximo que uma página pode levar para carregar ou a velocidade de processamento de um pedido.
@@ -19,9 +23,11 @@ Diferente dos requisitos funcionais (o que o sistema faz), os não funcionais de
 4. **Segurança:** Envolve a proteção do sistema contra acessos não autorizados e ataques, garantindo a integridade dos dados e a privacidade do usuário.
 5. **Usabilidade:** Refere-se à facilidade com que um usuário consegue interagir com o sistema. Um software com boa usabilidade é intuitivo e exige pouco treinamento.
 
----
+```
 
-## 4. Cenários de Trade-offs
+> 4. Cenários de Trade-offs
+
+```
 Um trade-off ocorre quando a melhoria de um requisito exige o sacrifício parcial de outro.
 
 1. **Segurança vs. Usabilidade:**
@@ -35,3 +41,37 @@ Um trade-off ocorre quando a melhoria de um requisito exige o sacrifício parcia
 3. **Performance vs. Custo:**
    * **Cenário:** Otimizar um site para responder em milissegundos utilizando servidores de altíssima potência.
    * **Descrição:** Para obter uma **Performance** excepcional, o engenheiro precisa investir em infraestrutura cara. O trade-off aqui é o ganho de velocidade em troca de um **Custo Financeiro** muito mais elevado.
+
+```
+
+> 5. Programa com sintaxe correta, mas com a lógica errada (j+1=>j-1).
+
+```
+
+1.
+
+# R: Não é possivel testar individualmente cada caso, pois existem 65535 casos de entrada;
+
+2. Quantos erros apontam para o problema de lógica?
+
+# R: 4
+
+3. Quais são?
+
+# R: -29999; 29999; -30000; e 30000.
+
+```
+
+> 6
+
+```
+
+
+
+
+
+
+
+
+
+
