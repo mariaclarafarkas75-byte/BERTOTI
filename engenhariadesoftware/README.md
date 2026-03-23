@@ -5,8 +5,11 @@ O primeiro trecho do livro estabelece uma distinção fundamental entre o "fazer
 
  O texto sugere que a programação, por si só, é uma atividade de construção que muitas vezes carece de rigor. A Engenharia de Software, por outro lado, é apresentada como a aplicação de conhecimento teórico para criar soluções **reais, precisas e seguras**. O ponto central é a necessidade de maturidade na indústria: assim como um engenheiro aeronáutico não pode errar cálculos sem causar desastres, o software moderno — que sustenta a vida em sociedade — exige métodos muito mais rigorosos do que a "programação tradicional".
 
- 2. Comentário: O Fator Tempo e Sustentabilidade
+```
 
+> 2. Comentário: O Fator Tempo e Sustentabilidade
+
+```
 No segundo trecho, a definição de Engenharia de Software ganha uma dimensão temporal. 
 
  Análise: Enquanto a programação foca em resolver o problema imediato (escrever o código), a engenharia foca em "manter esse código valioso e funcional durante anos". Isso envolve processos, ferramentas e uma cultura organizacional que suporte a mudança. O sucesso não é apenas lançar o software, mas garantir sua SUSTENTABILIDADE: a capacidade de um sistema reagir a mudanças, escalar conforme a organização cresce e sobreviver ao ciclo de vida que vai desde a criação até a sua eventual desativação (depreciação).
@@ -63,9 +66,7 @@ Um trade-off ocorre quando a melhoria de um requisito exige o sacrifício parcia
 
 ```
 
-> 6
 
-```
 
 
 
