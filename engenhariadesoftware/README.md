@@ -66,7 +66,16 @@ Um trade-off ocorre quando a melhoria de um requisito exige o sacrifício parcia
 
 ```
 
+> 6. Exercicio sobre um sistema de "Biblioteca" ( Usei um petshop para fazer a atividade ).
 
+```
+
+
+
+
+
+
+ 
 
 
 
