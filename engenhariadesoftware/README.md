@@ -70,6 +70,136 @@ Um trade-off ocorre quando a melhoria de um requisito exige o sacrifício parcia
 
 ```
 
+package BERTOTI;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Petshop {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        ArrayList<Pet> listaDePets = new ArrayList<>();
+        int opcao = 0;
+
+        System.out.println("--- Gestão de Pet Shop Java ---");
+
+        do {
+            System.out.println("\n1. Cadastrar Novo Pet");
+            System.out.println("2. Listar Pets na Loja");
+            System.out.println("3. Dar Banho em um Pet");
+            System.out.println("4. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = leitor.nextInt();
+            leitor.nextLine(); // Limpar o buffer
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Nome do Pet: ");
+                    String nome = leitor.nextLine();
+                    System.out.print("Espécie (Cão, Gato, etc): ");
+                    String especie = leitor.nextLine();
+                    listaDePets.add(new Pet(nome, especie));
+                    System.out.println("Pet cadastrado com sucesso!");
+                    break;
+
+                case 2:
+                    System.out.println("\n--- Lista de Espera ---");
+                    if (listaDePets.isEmpty()) {
+                        System.out.println("Nenhum pet no momento.");
+                    } else {
+                        for (int i = 0; i < listaDePets.size(); i++) {
+                            System.out.println(i + ". " + listaDePets.get(i));
+                        }
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Digite o índice do pet para o banho: ");
+                    int index = leitor.nextInt();
+                    if (index >= 0 && index < listaDePets.size()) {
+                        Pet selection = listaDePets.get(index);
+                        if (selection.isPrecisaDeBanho()) {
+                            selection.setPrecisaDeBanho(false);
+                            System.out.println(selection.getNome() + " tomou banho e agora está limpo!");
+                        } else {
+                            System.out.println("Este pet já está limpo!");
+                        }
+                    } else {
+                        System.out.println("Pet não encontrado.");
+                    }
+                    break;
+            }
+
+        } while (opcao != 4);
+
+        System.out.println("Sistema encerrado.");
+        leitor.close();
+    }
+}
+
+
+package BERTOTI;
+
+public class Pet {
+    private String nome;
+    private String especie;
+    private boolean precisaDeBanho;
+
+    public Pet(String nome, String especie) {
+        this.nome = nome;
+        this.especie = especie;
+        this.precisaDeBanho = true; // Todo pet chega precisando de um trato!
+    }
+
+    // Getters
+    public String getNome() { return nome; }
+    public String getEspecie() { return especie; }
+    public boolean isPrecisaDeBanho() { return precisaDeBanho; }
+
+    // Setter para atualizar o estado após o banho
+    public void setPrecisaDeBanho(boolean precisaDeBanho) {
+        this.precisaDeBanho = precisaDeBanho;
+    }
+
+    @Override
+    public String toString() {
+        String status = precisaDeBanho ? "[Sujeira detectada]" : "[Limpinho e Cheiroso]";
+        return status + " " + nome + " (" + especie + ")";
+    }
+}
+
+
+package BERTOTI;
+
+import java.util.ArrayList;
+
+public class HomologacaoPetshop {
+    public static void main(String[] args) {
+        ArrayList<Pet> bancoDadosFake = new ArrayList<>();
+
+        // Simulando a inserção de múltiplos registros (como um INSERT no SQL)
+        bancoDadosFake.add(new Pet("Bolinha", "Gato"));
+        bancoDadosFake.add(new Pet("Thor", "Cão"));
+        bancoDadosFake.add(new Pet("Nemo", "Peixe"));
+
+        System.out.println("Verificando contagem de pets...");
+        if (bancoDadosFake.size() == 3) {
+            System.out.println("Sucesso: 3 pets inseridos no sistema.");
+        } else {
+            System.out.println("Falha: Contagem incorreta.");
+        }
+
+        // Testando busca por nome
+        String busca = "Thor";
+        for (Pet p : bancoDadosFake) {
+            if (p.getNome().equals(busca)) {
+                System.out.println("Sucesso: Pet '" + busca + "' encontrado no sistema.");
+            }
+        }
+    }
+}
+
+```
 
 
 
